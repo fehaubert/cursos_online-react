@@ -1,0 +1,114 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f5f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ------------------NAVBAR-------------------------- */
+
+.navbar {
+  width: 100%;
+  height: 12vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #006400;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-logo h2 {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  padding-right: 40px;
+}
+
+.navbar-links li {
+  margin: 0;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #32cd32; 
+  transform: scale(1.1);
+}
+
+/* -----------------------------MAIN------------------------------- */
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 12vh;
+  overflow-y: auto;
+}
+
+.app {
+  margin-top: 10vh;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: calc(100vh - 12vh - 40px);
+}
+
+/* ----------RESPONSIVIDADE---------------- */
+@media (max-width: 900px) {
+  .app {
+    padding: 10px;
+  }
+
+  .navbar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 10px;
+  }
+
+  .navbar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+}
